@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        
+     <add id="Nauka_AdminMenu::menu" 
+          title="Pete Menu" 
+          module="Nauka_AdminMenu" 
+          sortOrder="10" 
+          resource="Magestore_CustomMenu::create"/>
+  
+  
+     <add id="Nauka_AdminMenu::menu_item" 
+          title="Manage Items" 
+          module="Nauka_AdminMenu" 
+          sortOrder="10" 
+          parent="Nauka_AdminMenu::menu" 
+          action="custommenu/create/index" 
+          resource="Magestore_CustomMenu::menu_item"/>
+  
+  
+     <add id="Nauka_AdminMenu::menu_configuration" 
+          title="Setting" 
+          module="Nauka_AdminMenu" 
+          sortOrder="20" 
+          parent="Nauka_AdminMenu::menu" 
+          action="adminhtml/system_config/edit/section/menu" 
+          resource="Magestore_CustomMenu::menu_configuration"/>
+   
+          
+    </menu>
+</config>
+
+ 
